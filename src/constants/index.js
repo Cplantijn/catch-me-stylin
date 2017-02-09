@@ -1,0 +1,12 @@
+export const REQUEST_NEW_SCENARIO = 'REQUEST_NEW_SCENARIO';
+export const SCENARIOS_LOADING = 'SCENARIOS_LOADING';
+export const SCENARIOS_LOADED = 'SCENARIOS_LOADED';
+export const START_SCENARIO = 'START_SCENARIO';
+export const UPDATE_CSS = 'UPDATE_CSS';
+export const SET_GUID = 'SET_GUID';
+export const SET_DISPLAY_NAME = 'SET_DISPLAY_NAME';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const POP_USERS = 'POP_USERS';
+export const SELECT_USER = 'SELECT_USER';
+export const UPDATE_USERS = 'UPDATE_USERS';

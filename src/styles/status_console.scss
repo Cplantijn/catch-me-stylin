@@ -1,0 +1,32 @@
+@import "variables";
+
+.status-console {
+  color: $white;
+  background: $secondary-color;
+  max-height: 75px;
+  ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    overflow-x:auto;
+    li {
+      margin-right: $global-pad;
+      padding: $global-pad / 2;
+      background: $user-token;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      &:hover, &.active {
+        background: $token-selected;
+      }
+      &.self {
+        background: $user-self !important;
+        &::after {
+          content: "  (Me)"
+        }
+      }
+    }
+  }
+}

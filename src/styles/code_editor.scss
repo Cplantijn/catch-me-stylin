@@ -1,0 +1,22 @@
+
+@import 'variables';
+
+.code-editor-container {
+  padding-top: $global-pad * 2;
+  position: relative;
+
+  &.zenburn {
+    background: $zenburn;
+  }
+  &.material {
+    background: $material;
+  }
+}
+
+.code-switcher {
+  position: absolute;
+}
+
+.ReactCodeMirror {
+  height: 100%;
+}

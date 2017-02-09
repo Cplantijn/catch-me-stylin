@@ -1,0 +1,21 @@
+@import 'variables';
+
+header {
+  max-height: 50px;
+  background-color: $primary-color;
+  color: $white;
+  justify-content: space-between;
+  h3 {
+    margin-top: 0;
+    font-family: $anton-font;
+    padding-left: $global-pad;
+  }
+  .scenario-dropdown {
+    padding-right: $global-pad;
+    display: flex;
+    span {
+      padding-right: $global-pad / 2;
+      white-space: nowrap;
+    }
+  }
+}

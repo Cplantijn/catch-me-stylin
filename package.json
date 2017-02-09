@@ -1,0 +1,53 @@
+{
+  "name": "css-showcasr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "webpack": "./node_modules/.bin/webpack",
+    "webpack:dev": "npm run webpack -- -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Plantijn",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.15.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.2.2",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "classnames": "^2.2.5",
+    "express": "^4.14.1",
+    "foundation-sites": "^6.3.0",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.2",
+    "react-codemirror": "^0.3.0",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.1",
+    "redux-thunk": "^2.2.0",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2",
+    "uuid": "^3.0.1"
+  }
+}

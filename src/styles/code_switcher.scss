@@ -1,0 +1,25 @@
+@import 'variables';
+
+.code-switcher {
+  position: absolute;
+  top: $global-pad / 2;
+  right: $global-pad;
+  color: $white;
+  z-index: 10;
+  border: 1px solid $white;
+  border-radius: 4px;
+  span {
+    padding: 0 0.5rem;
+    height: 100%;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.2s, background 0.2s;
+    &:hover, &.active {
+      color: $zenburn;
+      background: $white;
+    }
+    &:first-of-type {
+      border-right: 1px solid $white;
+    }
+  }
+};
