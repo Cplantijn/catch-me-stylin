@@ -38,7 +38,7 @@ app.put('/update', function(req, res) {
   users[req.body.guid].markupCss = req.body.markup;
   io.emit('markupUpdate', users);
   res.send();
-})
+});
 
 app.get('/scenarios', function (req, res) {
   var scenarios = _.map(scenariosObj.scenarios, function(scenario, key) {

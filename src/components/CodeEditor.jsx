@@ -29,14 +29,12 @@ export default class CodeEditor extends Component {
     if (mode === 'css') {
       opts = {
         mode: 'css',
-        theme: 'zenburn',
-        readOnly: false
+        theme: 'zenburn'
       };
     } else {
       opts = {
         mode: 'xml',
-        theme: 'material',
-        readOnly: true
+        theme: 'material'
       };
     }
     this.setState({
@@ -59,24 +57,24 @@ export default class CodeEditor extends Component {
     }, 'code-editor-container columns small-3');
 
     let editorValue;
-    let readOnlyOverride = {};
+    let readOnlyOverride = { readOnly: false };
 
-      if (this.state.mode === 'css') {
-        if (allUsers.selectedUser === user.guid) {
-          editorValue = activeScenario && activeScenario.cssContent ? activeScenario.cssContent : '';
-        } else if (allUsers.selectedUser) {
-          readOnlyOverride = { readOnly: true }
-          if (activeScenario && allUsers.users[allUsers.selectedUser].markupCss) {
-            editorValue = allUsers.users[allUsers.selectedUser].markupCss;
-          } else if (activeScenario && activeScenario.cssContent) {
-            editorValue = activeScenario.cssContent;
-          } else {
-            editorValue = '';
-          }
+    if (this.state.mode === 'css') {
+      if (allUsers.selectedUser === user.guid) {
+        editorValue = activeScenario && activeScenario.cssContent ? activeScenario.cssContent : '';
+      } else if (allUsers.selectedUser) {
+        if (activeScenario && allUsers.users[allUsers.selectedUser].markupCss) {
+          readOnlyOverride = { readOnly: true };
+          editorValue = allUsers.users[allUsers.selectedUser].markupCss;
+        } else if (activeScenario && activeScenario.cssContent) {
+          editorValue = activeScenario.cssContent;
+        } else {
+          editorValue = '';
         }
-      } else {
-        editorValue = activeScenario && activeScenario.htmlContent ? activeScenario.htmlContent : '';
       }
+    } else {
+      editorValue = activeScenario && activeScenario.htmlContent ? activeScenario.htmlContent : '';
+    }
 
     return (
       <div className={editorCls}>
