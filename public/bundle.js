@@ -20021,6 +20021,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       React.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Header__["a" /* default */], {
         requestScenario: this.props.requestScenario,
         fetchScenarios: this.props.fetchScenarios,
+        activeScenario: this.props.scenarios.activeScenario,
         scenarios: this.props.scenarios
       }),
       React.createElement(__WEBPACK_IMPORTED_MODULE_8__components_GameContainer__["a" /* default */], {
@@ -20454,7 +20455,17 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
-    const { requestScenario, fetchScenarios, scenarios } = this.props;
+    const { requestScenario, fetchScenarios, scenarios, activeScenario } = this.props;
+    let instructions = null;
+
+    if (activeScenario && activeScenario.objective) {
+      instructions = React.createElement(
+        'h4',
+        null,
+        activeScenario.objective
+      );
+    }
+
     return React.createElement(
       'header',
       { className: 'row expanded align-middle' },
@@ -20463,6 +20474,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         null,
         'Catch Me Stylin\''
       ),
+      instructions,
       React.createElement(__WEBPACK_IMPORTED_MODULE_1__ScenarioDropdown__["a" /* default */], {
         requestScenario: requestScenario,
         fetchScenarios: fetchScenarios,
@@ -21972,7 +21984,7 @@ exports = module.exports = __webpack_require__(18)();
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Anton|Jura);", ""]);
 
 // module
-exports.push([module.i, ".status-console {\n  color: #fff;\n  background: #040F16;\n  max-height: 75px; }\n  .status-console ul {\n    height: 100%;\n    width: 100%;\n    display: flex;\n    align-items: center;\n    list-style-type: none;\n    overflow-x: auto; }\n    .status-console ul li {\n      margin-right: 1rem;\n      padding: 0.5rem;\n      background: #8E5572;\n      font-weight: bold;\n      letter-spacing: 1px;\n      cursor: pointer; }\n      .status-console ul li:hover, .status-console ul li.active {\n        background: #A33B20; }\n      .status-console ul li.self {\n        background: #6F30A0 !important; }\n        .status-console ul li.self::after {\n          content: \"  (Me)\"; }\n", ""]);
+exports.push([module.i, ".status-console {\n  color: #fff;\n  background: #040F16;\n  max-height: 75px; }\n  .status-console ul {\n    height: 100%;\n    width: 100%;\n    display: flex;\n    align-items: center;\n    list-style-type: none;\n    overflow-x: auto; }\n    .status-console ul li {\n      margin-right: 1rem;\n      padding: 0.5rem;\n      background: #8E5572;\n      font-weight: bold;\n      letter-spacing: 1px;\n      cursor: pointer; }\n      .status-console ul li:hover {\n        border: 4px solid rgba(255, 255, 255, 0.4); }\n      .status-console ul li.active {\n        border: 4px solid #fff; }\n      .status-console ul li.self {\n        background: #6F30A0 !important; }\n        .status-console ul li.self::after {\n          content: \"  (Me)\"; }\n", ""]);
 
 // exports
 

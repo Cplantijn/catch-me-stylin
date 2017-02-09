@@ -43,6 +43,7 @@ class App extends Component {
         <Header
           requestScenario={this.props.requestScenario}
           fetchScenarios={this.props.fetchScenarios}
+          activeScenario={this.props.scenarios.activeScenario}
           scenarios={this.props.scenarios}
           />
         <GameContainer
