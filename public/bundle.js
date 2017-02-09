@@ -20322,14 +20322,12 @@ class CodeEditor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (mode === 'css') {
       opts = {
         mode: 'css',
-        theme: 'zenburn',
-        readOnly: false
+        theme: 'zenburn'
       };
     } else {
       opts = {
         mode: 'xml',
-        theme: 'material',
-        readOnly: true
+        theme: 'material'
       };
     }
     this.setState({
@@ -20352,14 +20350,14 @@ class CodeEditor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }, 'code-editor-container columns small-3');
 
     let editorValue;
-    let readOnlyOverride = {};
+    let readOnlyOverride = { readOnly: false };
 
     if (this.state.mode === 'css') {
       if (allUsers.selectedUser === user.guid) {
         editorValue = activeScenario && activeScenario.cssContent ? activeScenario.cssContent : '';
       } else if (allUsers.selectedUser) {
-        readOnlyOverride = { readOnly: true };
         if (activeScenario && allUsers.users[allUsers.selectedUser].markupCss) {
+          readOnlyOverride = { readOnly: true };
           editorValue = allUsers.users[allUsers.selectedUser].markupCss;
         } else if (activeScenario && activeScenario.cssContent) {
           editorValue = activeScenario.cssContent;
@@ -21956,7 +21954,7 @@ exports = module.exports = __webpack_require__(18)();
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Anton|Jura);", ""]);
 
 // module
-exports.push([module.i, "header {\n  max-height: 50px;\n  background-color: #23395B;\n  color: #fff;\n  justify-content: space-between; }\n  header h3 {\n    margin-top: 0;\n    font-family: \"Anton\", sans-serif;\n    padding-left: 1rem; }\n  header .scenario-dropdown {\n    padding-right: 1rem;\n    display: flex; }\n    header .scenario-dropdown span {\n      padding-right: 0.5rem;\n      white-space: nowrap; }\n", ""]);
+exports.push([module.i, "header {\n  max-height: 50px;\n  background-color: #23395B;\n  color: #fff;\n  justify-content: space-between; }\n  header h3 {\n    margin-top: 0;\n    margin-bottom: 0;\n    font-family: \"Anton\", sans-serif;\n    padding-left: 1rem; }\n  header .scenario-dropdown {\n    padding-right: 1rem;\n    display: flex; }\n    header .scenario-dropdown span {\n      padding-right: 0.5rem;\n      white-space: nowrap; }\n", ""]);
 
 // exports
 
